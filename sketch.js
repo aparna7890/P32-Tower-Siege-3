@@ -11,7 +11,7 @@ function preload(){
   polygonImg = loadImage("polygon.png")
   day = loadImage("day.png")
   night = loadImage("night.png")
-  getBg()
+  //getBg()
 }
 
 function setup(){
@@ -64,10 +64,10 @@ function setup(){
 }
 
 function draw(){
-  if(bgImg)
-  background(bgImg)
+  //if(bgImg)//we removed the API and time due to security issues in github
+  background(255)
   push();
-    fill("red")
+    fill(0)
     textSize(20)
     text("Drag the hexagon and release to launch it towards the blocks.", 100, 50)
     text("Press 'Space' to get a second chance to play!", 100, 80)
@@ -131,6 +131,7 @@ function keyPressed(){
   }
 }
 
+/*
 async function getBg(){
   var response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata')
   var responseJSON = await response.json();
@@ -148,4 +149,4 @@ async function getBg(){
   else{
     bgImg = loadImage("night.png")
   }
-}
+}*/
